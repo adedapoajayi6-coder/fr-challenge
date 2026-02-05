@@ -7,50 +7,88 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+
+    <style>
+        * {
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 
 
 
 
 <body>
-    <div>
+    <div class="">
+
+        <!-- mobile nav bar -->
+        <div id="mobile-nav" class="bg-[#fff]  z-50 hidden flex justify-start h-screen absolute w-[60%] py-7 px-4">
+
+            <div class=" pt-[55px] flex flex-col space-y-3 text-[20px] font-medium">
+                <a href=""> Home</a>
+                <a href="">New</a>
+                <a href="">Popular</a>
+                <a href=""> Trending</a>
+                <a href="">categories</a>
+            </div>
+           
+        </div>
+
+
+
+
 
         <!-- nav bar -->
-        <div class="pt-8">
-            <nav class=" h-16 h-16 w-full flex justify-between  items-center px-8">
-                <div> <img src="./New folder/logo (1).svg" alt=""> </div>
-                <div><Icon icon="material-symbols:menu-rounded" width="24" height="24" /></div>
-                <div class="  w-2/3 flex md:flex space-x-3 md:w-full  md:justify-end font-medium space-x-1 md:font-small">
-                    <a href=""> Home</a>
-                    <a href="">New</a>
-                    <a href="">Popular</a>
-                    <a href=""> Trending</a>
-                    <a href="">categories</a>
-                </div>
-            </nav>
-        </div>
+        <nav class=" h-auto w-full px-4 flex justify-between items-center py-4">
+            <div> 
+                <img src="./New folder/logo (1).svg" alt=""> 
+            </div>
+
+            <!-- nav links -->
+            <div class="flex hidden md:flex space-x-3 md:items-end font-medium space-x-1 md:font-normal">
+                <a href=""> Home</a>
+                <a href="">New</a>
+                <a href="">Popular</a>
+                <a href=""> Trending</a>
+                <a href="">categories</a>
+            </div>
+
+            <!-- menu icon  -->
+            <div id="menuBtn" class="p-2 md:hidden">
+                <iconify-icon icon="material-symbols:menu-rounded" width="24" height="24"></iconify-icon>
+            </div>
+             <div id="closeBtn" class="p-2 hidden">
+                <iconify-icon icon="ix:cancel" width="24" height="24"></iconify-icon>
+            </div>
+        </nav>
+
 
 
 
         <!-- first section -->
 
-        <div class="h-auto w-full  flex flex-col md:flex-row justify-center items-center space-x-6">
-            <div class="bg-white p-8 w-full md:w-[70%] h-3.9/4">
+        <div class="h-auto w-full px-4 flex flex-col md:flex-row justify-center items-center space-x-6">
+            <div class="bg-white w-full md:w-[60%] h-3.9/4">
                 <img src=" ./New folder/image-web-3-desktop.jpg" alt="">
                 <div class="   md:flex justify-between">
-                    <h1 class="text-5xl font-bold text-black mt-8 w-3/4 md:w-1/2">The Bright Future of Web 3.0?</h1>
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-black mt-8 w-3/4 md:w-1/2">The Bright
+                        Future
+                        of Web 3.0?</h1>
                     <div class="  w-full md:w-1/2 py-5  md:px-4 flex flex-col justify-start space-y-4">
                         <p class="text-gray-500">We dive into the next evolution of the web that
                             claims to put the power of the platforms back into the hands of the people.
                             But is it really fulfilling its promise?</p>
-                        <button class="bg-red-600 text-white w-full md:w-1/2
-                     md:px-2 py-1 rounded-md hover:bg-black">Read More</button>
+                        <button class="bg-red-600 text-white w-[120px]
+                     md:px-4 py-2  px-2 rounded-md hover:bg-black">Read More</button>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-white h-full p-3 w-full md:w-[30%]">
-                <div class="bg-black w-[90%] m-0  md:ml-6 h-auto space-y-3 ">
+            <div class="bg-white h-full  w-full md:w-[40%]">
+                <div class="bg-black w-full  h-auto space-y-3 py-7">
                     <h1 class="text-yellow-400 flex justify-start  text-lg  py-2 px-4"> NEW</h1>
                     <h2 class="font-semibold text-lg text-white hover:text-yellow-400 px-4 font-bold py-1">Hydrogen VS
                         Electric
@@ -74,46 +112,36 @@
             </div>
         </div>
 
-        <div class="w-full  h-auto">
-            <div class="w-auto h-full md:h-auto flex flex-col md:flex-row justify-center items-center">
-                <div class="flex p-5 space-x-6">
-                    <img class="w-[130px] h-[130px]" src="./New folder/image-retro-pcs.jpg" alt="">
-                    <div class="flex flex-col ">
-                        <h1 class="text-2xl text-gray-500 font-bold "> 01</h1>
-                        <h2 class="font-semibold text-lg text-black hover:text-red-300 ">Reviving Retro PCs</h2>
-                        <p class=" w-1/21">What happens when old PCs are given modern upgrades?</p>
-                    </div>
+
+        <div
+            class="w-auto h-full px-4 py-5 md:h-auto flex flex-col space-y-2 md:space-y-0 md:flex-row md:justify-between items-center">
+            <div class="flex py-5 space-x-3">
+                <img class="w-[130px] h-[130px]" src="./New folder/image-retro-pcs.jpg" alt="">
+                <div class="flex flex-col ">
+                    <h1 class="text-2xl text-gray-500 font-bold "> 01</h1>
+                    <h2 class="font-semibold text-lg text-black hover:text-red-300 ">Reviving Retro PCs</h2>
+                    <p class=" w-1/21">What happens when old PCs are given modern upgrades?</p>
                 </div>
+            </div>
 
-                <div class="flex p-5 space-x-6">
-                    <img class="w-[130px] h-[130px] " src="./New folder/image-top-laptops.jpg" alt="">
-                    <div class="flex flex-col ">
-                        <h1 class="text-2xl text-gray-500 font-bold "> 02</h1>
-                        <h2 class="font-semibold text-lg text-black hover:text-red-300 ">Top 10 Laptops of 2022</h2>
-                        <p class=" w-1/21">Our best picks for various needs and budgets.</p>
-                    </div>
-
+            <div class="flex py-5 space-x-6">
+                <img class="w-[130px] h-[130px] " src="./New folder/image-top-laptops.jpg" alt="">
+                <div class="flex flex-col ">
+                    <h1 class="text-2xl text-gray-500 font-bold "> 02</h1>
+                    <h2 class="font-semibold text-lg text-black hover:text-red-300 ">Top 10 Laptops of 2022</h2>
+                    <p class=" w-1/21">Our best picks for various needs and budgets.</p>
                 </div>
-
-                <div class="flex p-5 space-x-6">
-                    <img class="w-[130px] h-[130px]" src="./New folder/image-gaming-growth.jpg" alt="">
-                    <div class="flex flex-col ">
-                        <h1 class="text-2xl text-gray-500 font-bold "> 03</h1>
-                        <h2 class="font-semibold text-lg text-black hover:text-red-300 ">The Growth of Gaming</h2>
-                        <p class=" w-1/21">How the pandemic has sparked fresh opportunities.?</p>
-                    </div>
-                </div>
-
-
-
-
-
 
             </div>
 
-
-            <p class="flex justify-center items-center text-[13px]"> Challenge by Frontend Mentor. Coded by dlsix</p>
-
+            <div class="flex py-5 space-x-6">
+                <img class="w-[130px] h-[130px]" src="./New folder/image-gaming-growth.jpg" alt="">
+                <div class="flex flex-col ">
+                    <h1 class="text-2xl text-gray-500 font-bold "> 03</h1>
+                    <h2 class="font-semibold text-lg text-black hover:text-red-300 ">The Growth of Gaming</h2>
+                    <p class=" w-1/21">How the pandemic has sparked fresh opportunities.?</p>
+                </div>
+            </div>
 
 
 
@@ -123,6 +151,18 @@
         </div>
 
 
+        <p class="flex justify-center items-center text-[13px]"> Challenge by Frontend Mentor. Coded by dlsix</p>
+
+
+
+
+
+
+
+
+    </div>
+
+<script src="/script.js"></script>
 </body>
 
 </html>
